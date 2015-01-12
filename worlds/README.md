@@ -7,4 +7,5 @@ Map installation (requires admin)
 3. `sudo cp ~/ros_workspace/cwru_376_GROUPNAME/2nd_floor_one_door.yaml .`
 
 Launch the world
+
 `roslaunch cwru_376_launchers stdr_glennan_2.launch`
