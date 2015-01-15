@@ -8,6 +8,8 @@ ros::NodeHandle nh; // two lines to create a publisher object that can talk to R
 // commands are of type geometry_msgs/Twist, but they use only velocity in x dir and
 //  yaw rate in z-dir; other 4 fields will be ignored
 ros::Publisher cmd_publisher = nh.advertise<geometry_msgs::Twist>("/robot0/cmd_vel",1);
+// change topic to command abby...
+//ros::Publisher cmd_publisher = nh.advertise<geometry_msgs::Twist>("abby/cmd_vel",1);
 ros::Rate sleep_timer(100); //let's make a 100Hz timer
 
 //create a variable of type "Twist", as defined in: /opt/ros/hydro/share/geometry_msgs
@@ -28,8 +30,9 @@ twist_cmd.linear.x = 0.4;
 
 
 // timer test...print out a message every 1 second
-for (int j=0;j<5;j++) {
-    ROS_INFO("TICK!");
+ROS_INFO("count-down");
+for (int j=3;j>0;j--) {
+    ROS_INFO("%d",j);
     for (int i = 0; i<100;i++)
         sleep_timer.sleep();
 }
