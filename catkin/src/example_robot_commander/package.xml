@@ -13,7 +13,7 @@
   <!-- Commonly used license strings: -->
   <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
   <license>TODO</license>
-
+ 
 
   <!-- Url tags are optional, but mutiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
@@ -42,8 +42,10 @@
   <buildtool_depend>catkin_simple</buildtool_depend>
   <build_depend>roscpp</build_depend>
 <build_depend>geometry_msgs/Twist</build_depend>
+<build_depend>nav_msgs/Odometry</build_depend>
   <run_depend>roscpp</run_depend>
 <run_depend>geometry_msgs/Twist</run_depend>
+<run_depend>nav_msgs/Odometry</run_depend>
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- You can specify that this package is a metapackage here: -->
