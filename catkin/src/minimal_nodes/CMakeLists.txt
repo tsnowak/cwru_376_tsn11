@@ -17,6 +17,8 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 # Executables
 cs_add_executable(minimal_subscriber src/minimal_subscriber.cpp)
 cs_add_executable(example_publisher src/example_publisher.cpp)
+cs_add_executable(minimal_controller src/minimal_controller.cpp)
+cs_add_executable(minimal_simulator src/minimal_simulator.cpp)
 # target_link_library(example my_lib)
 
 cs_install()
