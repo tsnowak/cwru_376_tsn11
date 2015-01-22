@@ -52,6 +52,52 @@ for (int i=0;i<niters;i++) {
     cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no hard done
     sleep_timer.sleep(); // sleep for (remainder of) 10m
 }
+
+//Begin moving forward again
+twist_cmd.linear.x = 0.4;
+twist_cmd.angular.z = 0.0;
+niters = 5000; //Needs to be changes to reflect actual length of hallway
+
+ROS_INFO("Time to move forward again");
+
+for (int i=0;i<niters;i++) {
+    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no hard done
+    sleep_timer.sleep(); // sleep for (remainder of) 10m
+}
+
+twist_cmd.linear.x = 0.0;
+twist_cmd.angular.z = -0.314;
+niters = 500; //Once again, hopefully this is the correct amount of rotation, but need to see to make sure
+
+ROS_INFO("Time to rotate negative again");
+
+for (int i=0;i<niters;i++) {
+    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no hard done
+    sleep_timer.sleep(); // sleep for (remainder of) 10m
+}
+
+twist_cmd.linear.x = 0.4;
+twist_cmd.angular.z = 0.0;
+niters = 1200; //Again no idea here, just a guess-timate
+
+ROS_INFO("The final leg of the journey!");
+
+for (int i=0;i<niters;i++) {
+    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no hard done
+    sleep_timer.sleep(); // sleep for (remainder of) 10m
+}
+
+twist_cmd.linear.x = 0.0;
+twist_cmd.angular.z = -0.314;
+niters = 500; //should be facing the vending machines now
+
+ROS_INFO("I see you tasty preciouses! I now face the vending machines!");
+
+for (int i=0;i<niters;i++) {
+    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no hard done
+    sleep_timer.sleep(); // sleep for (remainder of) 10m
+}
+
 ROS_INFO("my work here is done");
 //while (ros::ok()) 
 {
