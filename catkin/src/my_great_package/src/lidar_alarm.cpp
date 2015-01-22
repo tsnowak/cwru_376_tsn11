@@ -3,10 +3,6 @@
 #include <std_msgs/Float32.h> //Including the Float32 class from std_msgs
 #include <std_msgs/Bool.h> // boolean message time
 
-//topics are currently hard-coded to run with STDR simulator; run with:
-//roslaunch stdr_launchers server_with_map_and_gui_plus_robot.launch
-// or:  roslaunch cwru_376_launchers stdr_glennan_2.launch 
-
 
 const double MIN_SAFE_DISTANCE = 0.5; // set alarm if anything is within 0.5m of the front of robot
 
