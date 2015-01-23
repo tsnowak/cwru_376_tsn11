@@ -56,7 +56,7 @@ for (int i=0;i<niters;i++) {
 //Begin moving forward again
 twist_cmd.linear.x = 0.4;
 twist_cmd.angular.z = 0.0;
-niters = 5000; //Needs to be changes to reflect actual length of hallway
+niters = 3100; //Needs to be changed to reflect actual length of hallway
 
 ROS_INFO("Time to move forward again");
 
@@ -78,7 +78,7 @@ for (int i=0;i<niters;i++) {
 
 twist_cmd.linear.x = 0.4;
 twist_cmd.angular.z = 0.0;
-niters = 1200; //Again no idea here, just a guess-timate
+niters = 2100; //Again no idea here, just a guess-timate
 
 ROS_INFO("The final leg of the journey!");
 
@@ -99,7 +99,7 @@ for (int i=0;i<niters;i++) {
 }
 
 ROS_INFO("my work here is done");
-//while (ros::ok()) 
+while (ros::ok()) 
 {
 twist_cmd.linear.x = 0.0;
 twist_cmd.angular.z = 0;
