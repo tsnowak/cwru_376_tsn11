@@ -1,3 +1,5 @@
+// wsn example program to illustrate LIDAR processing.  1/23/15
+
 #include <ros/ros.h> //Must include this for all ROS cpp projects
 #include <sensor_msgs/LaserScan.h>
 #include <std_msgs/Float32.h> //Including the Float32 class from std_msgs
