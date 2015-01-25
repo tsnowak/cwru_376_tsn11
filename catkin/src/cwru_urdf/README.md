@@ -14,6 +14,7 @@ In another terminal run
 This should produce a flat, gray ground-plane.  If this does not come up, kill this process and restart it.
 In another terminal, run:
  `roslaunch cwru_urdf cwruBot_urdf.launch`
+
 In rviz (`rosrun rviz rviz`), choose "base_link" as the fixed frame in rviz, and add a display of LaserScan (on topic /laser/scan) to visualize the lidar.
 
 Can test run the robot from a command line, e.g., with (e.g.):
