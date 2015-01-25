@@ -9,9 +9,11 @@ The robot will stall if it runs into a heavy object--but it is able to push arou
 
 ## Example usage
 In a terminal, run `roscore`
-In another terminal run 
-`rosrun gazebo_ros gazebo`  
+
+In another terminal run `rosrun gazebo_ros gazebo`  
+
 This should produce a flat, gray ground-plane.  If this does not come up, kill this process and restart it.
+
 In another terminal, run:
  `roslaunch cwru_urdf cwruBot_urdf.launch`
 
