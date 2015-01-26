@@ -21,7 +21,7 @@ In rviz (`rosrun rviz rviz`), choose "base_link" as the fixed frame in rviz, and
 
 Can test run the robot from a command line, e.g., with (e.g.):
 
-`rostopic pub -r 10 /cmd_vel geotry_msgs/Twist  '{linear:  {x: 0.2, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.1}}'`
+`rostopic pub -r 10 /cmd_vel geometry_msgs/Twist  '{linear:  {x: 0.2, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.1}}'`
 
 To cause the robot to move at 0.2m/s and rotate at 0.1rad/sec, making slow circles.
 Run `rostopic echo odom` to see the robot achieve the commanded speeds, and to see the pose evolve as the robot moves.
