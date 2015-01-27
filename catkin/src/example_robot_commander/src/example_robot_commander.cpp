@@ -41,7 +41,7 @@ int niters = 1200; //1000 iters at 100Hz is 10 seconds;
 //iteration counter; at 10ms/iteration, and 0.2m/sec, expect 2mm/iter
 // should move by 2m over 10 sec
 for (int i=0;i<niters;i++) {
-    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no hard done
+    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no harm done
     sleep_timer.sleep(); // sleep for (remainder of) 10m
 }
 twist_cmd.linear.x = 0.0;
@@ -49,41 +49,41 @@ twist_cmd.angular.z = -0.314;
 niters=500; // 5 sec
 ROS_INFO("Time to rotate negative");
 for (int i=0;i<niters;i++) {
-    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no hard done
+    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no harm done
     sleep_timer.sleep(); // sleep for (remainder of) 10m
 }
 
 //Begin moving forward again
 twist_cmd.linear.x = 0.4;
 twist_cmd.angular.z = 0.0;
-niters = 3100; //Needs to be changed to reflect actual length of hallway
+niters = 3100; //Tuned by guess check and revise
 
 ROS_INFO("Time to move forward again");
 
 for (int i=0;i<niters;i++) {
-    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no hard done
+    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no harm done
     sleep_timer.sleep(); // sleep for (remainder of) 10m
 }
 
 twist_cmd.linear.x = 0.0;
 twist_cmd.angular.z = -0.314;
-niters = 500; //Once again, hopefully this is the correct amount of rotation, but need to see to make sure
+niters = 500; //Proper 90 degree turn
 
 ROS_INFO("Time to rotate negative again");
 
 for (int i=0;i<niters;i++) {
-    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no hard done
+    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no harm done
     sleep_timer.sleep(); // sleep for (remainder of) 10m
 }
 
 twist_cmd.linear.x = 0.4;
 twist_cmd.angular.z = 0.0;
-niters = 2100; //Again no idea here, just a guess-timate
+niters = 2100; //Tuned by test and retest in the simulation
 
 ROS_INFO("The final leg of the journey!");
 
 for (int i=0;i<niters;i++) {
-    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no hard done
+    cmd_publisher.publish(twist_cmd); // really, should only need to publish this once, but no harm done
     sleep_timer.sleep(); // sleep for (remainder of) 10m
 }
 
